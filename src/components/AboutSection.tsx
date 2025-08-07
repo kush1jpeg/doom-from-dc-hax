@@ -33,7 +33,7 @@ const AboutSection = () => {
   const stats = [
     { icon: Clock, label: 'Duration', value: '36 Hours' },
     { icon: Calendar, label: 'Date', value: 'Oct 5-6, 2025' },
-    { icon: Users, label: 'Team Size', value: 'Max 5' },
+    { icon: Users, label: 'Team Size', value: 'Max 4' },
     { icon: Zap, label: 'Tracks', value: '4 Domains' }
   ];
 
@@ -58,7 +58,7 @@ const AboutSection = () => {
 
             <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                <span className="text-destructive font-semibold">Doomsday </span>
+                <span className="text-primary font-semibold">Doomsday </span>
                 awakens, only the most cunning minds can forge salvation through code.
               </p>
 

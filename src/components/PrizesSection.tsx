@@ -1,4 +1,5 @@
 import { Trophy, Gift, Users, Zap, Star, Medal } from 'lucide-react';
+import waffleImg from './pfp/waffle.png';
 
 const PrizesSection = () => {
   const prizes = [
@@ -37,10 +38,7 @@ const PrizesSection = () => {
   ];
 
   const sponsors = [
-    { name: 'Tech Corp', level: 'Platinum' },
-    { name: 'Innovation Labs', level: 'Gold' },
-    { name: 'StartupHub', level: 'Silver' },
-    { name: 'CodeCraft', level: 'Bronze' }
+    { name: 'waffle', level: 'Gold', img: './pfp/waffle.png' },
   ];
 
   const allPerks = [
@@ -171,13 +169,15 @@ const PrizesSection = () => {
           <h3 className="text-3xl font-orbitron font-bold text-primary-glow mb-8">
             Powered by Our Allies
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex justify-center items-center md:grid-cols-2 lg:grid-cols-4 gap-6">
             {sponsors.map((sponsor, index) => (
               <div key={index} className="doom-card p-6 rounded-xl text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-glow rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">
-                    {sponsor.name.charAt(0)}
-                  </span>
+                <div className="h-max rounded-lg mx-auto mb-4 flex items-center justify-center w-max">
+                  <img
+                    src={waffleImg}
+                    alt="Sponsor"
+                    className="w-14 object-contain"
+                  />
                 </div>
                 <h4 className="font-orbitron font-bold text-foreground mb-1">
                   {sponsor.name}

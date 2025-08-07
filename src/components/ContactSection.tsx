@@ -5,26 +5,15 @@ import {
 } from 'lucide-react';
 import FuzzyText from './ui/fuzzyText';
 
+
+/// to fill the core team memebers
 const ContactSection = () => {
   const organizers = [
     {
-      name: "Ayush Awasthi",
-      role: "Core Team",
-      email: "ayushawasthicoding@gmail.com",
-      speciality: "#"
-    },
-    {
-      name: "Amay Mishra",
-      role: "Project lead",
-      email: "#",
-      speciality: "#"
-    },
-
-    {
-      name: "Kushagra",
-      role: "Core Team",
-      email: "kushuvikas@gmail.com",
-      speciality: "Core Developer"
+      name: " ",
+      role: " ",
+      email: " ",
+      speciality: " "
     },
   ];
 
@@ -84,6 +73,10 @@ const ContactSection = () => {
         </h3>
 
         {/* Grid of Cards */}
+
+
+        {/*  uncomment to display the team members shit
+
         <div className="flex justify-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {organizers.map((organizer, index) => (
@@ -113,6 +106,9 @@ const ContactSection = () => {
             ))}
           </div>
         </div>
+        */}
+
+
       </div>
 
 

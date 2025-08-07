@@ -65,10 +65,7 @@ const HeroSection = () => {
         {/* SLOGAN */}
         <div className="text-lg md:text-2xl lg:text-3xl mb-12 font-inter font-light tracking-wide">
           <div className="cyber-border p-6 inline-block">
-            <span className="text-muted-foreground">36 hours.</span>
-            <span className="text-primary mx-4">No sleep.</span>
-            <span className="text-destructive mx-4">No mercy.</span>
-            <span className="text-primary-neon">Just code.</span>
+            <span className="text-muted-foreground">just 36 hours.</span>
           </div>
         </div>
 
@@ -78,7 +75,7 @@ const HeroSection = () => {
             variant="hero"
             size="lg"
             onClick={register}
-            className="text-xl px-12 py-6 h-auto"
+            className=" text-xl px-10 py-5 h-auto !rounded-none cursor-progress"
           >
             Register Now
           </Button>
@@ -86,7 +83,7 @@ const HeroSection = () => {
           <Button
             variant="neon"
             size="lg"
-            className="text-xl px-12 py-6 h-auto text-teal-50 hover:text-teal-500 transition-colors duration-300"
+            className="rounded-none text-xl px-12 py-6 h-auto text-teal-50 hover:text-teal-500 transition-colors duration-300"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Learn More

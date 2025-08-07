@@ -9,7 +9,6 @@ const TracksSection = () => {
       icon: Brain,
       title: 'AI & Machine Learning',
       shortTitle: 'AI',
-      doomTheme: 'Brainiac\'s Domain',
       description: 'Harness the power of artificial intelligence to combat digital chaos. Build intelligent systems that can predict, adapt, and evolve.',
       problems: [
         'Predictive analytics for crisis management',
@@ -24,7 +23,6 @@ const TracksSection = () => {
       icon: Wifi,
       title: 'Internet of Things',
       shortTitle: 'IoT',
-      doomTheme: 'Cyborg\'s Network',
       description: 'Connect the physical and digital realms. Create smart ecosystems that respond to environmental changes in real-time.',
       problems: [
         'Smart city infrastructure monitoring',
@@ -39,7 +37,6 @@ const TracksSection = () => {
       icon: Coins,
       title: 'Web3 & Blockchain',
       shortTitle: 'Web3',
-      doomTheme: 'Luthor\'s Ledger',
       description: 'Revolutionize trust and transparency. Build decentralized solutions that empower communities and ensure data integrity.',
       problems: [
         'Decentralized identity verification',
@@ -54,7 +51,6 @@ const TracksSection = () => {
       icon: Lightbulb,
       title: 'Open Innovation',
       shortTitle: 'Innovation',
-      doomTheme: 'Justice League Wildcard',
       description: 'Think beyond conventional boundaries. Tackle any challenge with creative solutions that don\'t fit traditional categories.',
       problems: [
         'Climate change mitigation tools',
@@ -101,13 +97,6 @@ const TracksSection = () => {
                 <p className="text-lg text-foreground">
                   {track.title}
                 </p>
-              </div>
-
-              {/* Doom Theme */}
-              <div className="text-center mb-6">
-                <span className="inline-block px-3 py-1 bg-destructive/20 text-destructive rounded-full text-sm font-semibold">
-                  {track.doomTheme}
-                </span>
               </div>
 
               {/* Expandable Content */}
