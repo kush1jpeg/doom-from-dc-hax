@@ -11,12 +11,12 @@ const AboutSection = () => {
 
   useEffect(() => {
     // Set target date to first week of October (placeholder date)
-    const targetDate = new Date('2024-10-05T09:00:00');
-    
+    const targetDate = new Date('2025-10-05T10:00:00');
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
-      
+
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -32,8 +32,8 @@ const AboutSection = () => {
 
   const stats = [
     { icon: Clock, label: 'Duration', value: '36 Hours' },
-    { icon: Calendar, label: 'Date', value: 'Oct 5-6, 2024' },
-    { icon: Users, label: 'Team Size', value: 'Max 4' },
+    { icon: Calendar, label: 'Date', value: 'Oct 5-6, 2025' },
+    { icon: Users, label: 'Team Size', value: 'Max 5' },
     { icon: Zap, label: 'Tracks', value: '4 Domains' }
   ];
 
@@ -51,28 +51,27 @@ const AboutSection = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Story */}
-          <div className="space-y-6">
+          <div className="space-y-10">
             <h3 className="text-3xl font-orbitron font-bold text-primary-glow mb-6">
               The Apocalypse is Here
             </h3>
-            
+
             <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                In the depths of <span className="text-primary-neon font-semibold">Apokolips</span>, 
-                where Darkseid's minions roam and <span className="text-destructive font-semibold">Doomsday</span> 
+                <span className="text-destructive font-semibold">Doomsday </span>
                 awakens, only the most cunning minds can forge salvation through code.
               </p>
-              
+
               <p>
-                <span className="text-primary font-semibold">Brainiac's algorithms</span> have corrupted 
-                reality itself. The barriers between digital and physical realms crumble. 
-                Your mission: <span className="text-primary-neon font-semibold">battle chaos with code</span>, 
+                <span className="text-primary font-semibold">Brainiac's algorithms</span> have corrupted
+                reality itself. The barriers between digital and physical realms crumble.
+                Your mission: <span className="text-primary-neon font-semibold">battle chaos with code</span>,
                 turn madness into machine intelligence.
               </p>
-              
+
               <p>
-                For 36 hours, you will traverse the underworld of innovation, 
-                wielding nothing but your intellect, caffeine, and the raw power of creation. 
+                For 36 hours, you will traverse the underworld of innovation,
+                wielding nothing but your intellect, caffeine, and the raw power of creation.
                 <span className="text-primary-glow font-semibold"> Welcome to Doom from the DC.</span>
               </p>
             </div>
@@ -82,8 +81,8 @@ const AboutSection = () => {
                 Mission Objective
               </h4>
               <p className="text-muted-foreground">
-                Harness cutting-edge technologies to solve real-world crises. 
-                Build solutions that would make even the Justice League proud.
+                Build solutions that would make even the Justice League proud. <br />
+                It’s a counterstrike against entropy.
               </p>
             </div>
           </div>
@@ -93,7 +92,7 @@ const AboutSection = () => {
             <h3 className="text-2xl font-orbitron font-bold mb-8 text-primary-glow">
               COUNTDOWN TO CHAOS
             </h3>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
               {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} className="doom-card p-6 rounded-lg neon-glow">
@@ -121,19 +120,6 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* Quote Section */}
-        <div className="text-center">
-          <div className="max-w-4xl mx-auto p-8 doom-card rounded-lg">
-            <blockquote className="text-2xl md:text-3xl font-light italic text-primary-glow mb-4">
-              "In brightest day, in blackest night, no bug shall escape our sight. 
-              Let those who worship evil's might, beware our code—Developer's light!"
-            </blockquote>
-            <cite className="text-muted-foreground font-orbitron">
-              — The Developer's Creed
-            </cite>
           </div>
         </div>
       </div>

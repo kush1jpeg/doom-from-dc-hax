@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Brain, Wifi, Coins, Lightbulb } from 'lucide-react';
 
 const TracksSection = () => {
-  const [hoveredTrack, setHoveredTrack] = useState<number | null>(null);
+  const [hoveredTrack, setHoveredTrack] = useState<boolean>(false);
 
   const tracks = [
     {
@@ -77,21 +77,18 @@ const TracksSection = () => {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto mb-8" />
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Four domains of digital warfare await. Pick your weapons, assemble your team, 
+            Four domains of digital warfare await. Pick your weapons, assemble your team,
             and prepare to face the challenges that threaten our reality.
           </p>
         </div>
 
         {/* Tracks Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {tracks.map((track, index) => (
+          {tracks.map((track) => (
             <div
-              key={index}
-              className={`relative doom-card rounded-xl p-6 cursor-pointer transition-all duration-500 ${
-                hoveredTrack === index ? 'scale-105' : ''
-              }`}
-              onMouseEnter={() => setHoveredTrack(index)}
-              onMouseLeave={() => setHoveredTrack(null)}
+              className={`relative doom-card rounded-xl p-6 cursor-pointer transition-all duration-500 ${hoveredTrack ? 'scale-105' : ''
+                }`}
+              onMouseEnter={() => setHoveredTrack(true)}
             >
               {/* Icon & Title */}
               <div className="text-center mb-6">
@@ -114,14 +111,13 @@ const TracksSection = () => {
               </div>
 
               {/* Expandable Content */}
-              <div className={`transition-all duration-500 overflow-hidden ${
-                hoveredTrack === index ? 'max-h-96 opacity-100' : 'max-h-16 opacity-70'
-              }`}>
+              <div className={`transition-all duration-500 overflow-hidden ${hoveredTrack ? 'max-h-96 opacity-100' : 'max-h-16 opacity-70'
+                }`}>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {track.description}
                 </p>
 
-                {hoveredTrack === index && (
+                {hoveredTrack && (
                   <div className="space-y-4 animate-fade-in">
                     <div>
                       <h4 className="text-primary font-semibold mb-2 text-sm">Example Challenges:</h4>
@@ -145,33 +141,13 @@ const TracksSection = () => {
               </div>
 
               {/* Hover Indicator */}
-              {hoveredTrack !== index && (
+              {!hoveredTrack && (
                 <div className="text-center mt-4">
                   <span className="text-xs text-muted-foreground">Hover to explore</span>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="doom-card p-8 rounded-xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-orbitron font-bold text-primary-glow mb-4">
-              Ready to Choose Your Path?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Teams can switch tracks during the event, but choose wisely—each domain requires different skills and approaches.
-            </p>
-            <div className="flex justify-center">
-              <button
-                onClick={() => document.getElementById('registration')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-3 rounded-lg font-orbitron font-bold uppercase tracking-wider neon-glow transition-all hover:from-primary-glow hover:to-primary-neon"
-              >
-                Join the Battle
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import TracksSection from '@/components/TracksSection';
 import ScheduleSection from '@/components/ScheduleSection';
 import VenueSection from '@/components/VenueSection';
 import PrizesSection from '@/components/PrizesSection';
-import RegistrationSection from '@/components/RegistrationSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 
@@ -17,7 +16,6 @@ const Index = () => {
       <ScheduleSection />
       <VenueSection />
       <PrizesSection />
-      <RegistrationSection />
       <FAQSection />
       <ContactSection />
     </div>

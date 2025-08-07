@@ -2,14 +2,7 @@ import { Trophy, Gift, Users, Zap, Star, Medal } from 'lucide-react';
 
 const PrizesSection = () => {
   const prizes = [
-    {
-      position: '1st Place',
-      title: 'Champion of Apokolips',
-      amount: '₹50,000',
-      icon: Trophy,
-      color: 'from-yellow-400 to-orange-500',
-      perks: ['Cash Prize', 'Winner Certificate', 'Premium Swag Kit', 'Internship Opportunities']
-    },
+
     {
       position: '2nd Place',
       title: 'Guardian of Gotham',
@@ -19,9 +12,17 @@ const PrizesSection = () => {
       perks: ['Cash Prize', 'Runner-up Certificate', 'Swag Kit', 'Mentorship Program']
     },
     {
+      position: '1st Place',
+      title: 'Champion of Apokolips',
+      amount: '₹1,00,000',
+      icon: Trophy,
+      color: 'from-yellow-400 to-orange-500',
+      perks: ['Cash Prize', 'Winner Certificate', 'Premium Swag Kit', 'Internship Opportunities']
+    },
+    {
       position: '3rd Place',
       title: 'Defender of Metropolis',
-      amount: '₹20,000',
+      amount: '₹15,000',
       icon: Star,
       color: 'from-amber-600 to-yellow-700',
       perks: ['Cash Prize', 'Certificate', 'Swag Kit', 'Network Access']
@@ -29,9 +30,9 @@ const PrizesSection = () => {
   ];
 
   const specialPrizes = [
-    { title: 'Best Innovation', description: 'Most creative solution', prize: '₹10,000' },
-    { title: 'Best Design', description: 'Outstanding UI/UX', prize: '₹10,000' },
-    { title: 'Best AI Implementation', description: 'Superior AI integration', prize: '₹10,000' },
+    { title: 'Best Innovation', description: 'Most creative solution', prize: '₹3,000' },
+    { title: 'Best AI Implementation', description: 'Superior AI integration', prize: '₹3,000' },
+    { title: 'Mentors\'s Choice', description: 'Best code-base', prize: '₹3,000' },
     { title: 'People\'s Choice', description: 'Community favorite', prize: '₹5,000' }
   ];
 
@@ -70,22 +71,21 @@ const PrizesSection = () => {
         {/* Main Prizes */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {prizes.map((prize, index) => (
-            <div 
-              key={index} 
-              className={`doom-card rounded-xl p-8 text-center relative overflow-hidden group ${
-                index === 0 ? 'scale-105 border-2 border-primary' : ''
-              }`}
+            <div
+              key={index}
+              className={`doom-card rounded-xl p-8 text-center relative overflow-hidden group ${index === 1 ? 'scale-105 border-2 border-primary' : ''
+                }`}
             >
               {/* Winner Glow Effect */}
-              {index === 0 && (
+              {index === 1 && (
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary-glow/10 rounded-xl" />
               )}
-              
+
               <div className="relative z-10">
                 <div className={`inline-flex p-6 rounded-full bg-gradient-to-r ${prize.color} mb-6`}>
                   <prize.icon className="w-12 h-12 text-white" />
                 </div>
-                
+
                 <div className="mb-6">
                   <h3 className="text-sm font-orbitron uppercase tracking-wider text-muted-foreground mb-2">
                     {prize.position}
@@ -188,15 +188,7 @@ const PrizesSection = () => {
               </div>
             ))}
           </div>
-          
-          <div className="mt-8">
-            <p className="text-muted-foreground mb-4">
-              Interested in sponsoring the future of innovation?
-            </p>
-            <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-orbitron font-bold uppercase tracking-wider hover:bg-primary-glow transition-colors">
-              Become a Sponsor
-            </button>
-          </div>
+
         </div>
       </div>
     </section>

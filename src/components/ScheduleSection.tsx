@@ -9,24 +9,18 @@ const ScheduleSection = () => {
       day: 'Day 1 - The Awakening',
       date: 'October 5, 2024',
       events: [
-        {
-          time: '09:00 - 10:00',
-          title: 'Registration & Check-in',
-          description: 'Welcome to the apocalypse. Get your battle gear.',
-          icon: Users,
-          type: 'registration'
-        },
+
         {
           time: '10:00 - 11:00',
-          title: 'Opening Ceremony',
+          title: 'Registration & Mentor Sync',
           description: 'Witness the beginning of the end. Rules, tracks, and inspiration.',
           icon: Presentation,
           type: 'ceremony'
         },
         {
           time: '11:00 - 11:30',
-          title: 'Team Formation & Networking',
-          description: 'Assemble your squad if you haven\'t already.',
+          title: 'Networking',
+          description: 'Know your opponents',
           icon: Users,
           type: 'networking'
         },
@@ -74,14 +68,14 @@ const ScheduleSection = () => {
         {
           time: '00:00 - 08:00',
           title: 'Midnight to Dawn Marathon',
-          description: 'The longest night. Caffeine is your ally.',
+          description: 'The longest night. Caffeine and brain-fog is your ally.',
           icon: Code,
           type: 'hacking'
         },
         {
           time: '08:00 - 09:00',
-          title: 'Breakfast & Mentor Check-ins',
-          description: 'Morning fuel and guidance from the elders.',
+          title: 'Breakfast & final discussions',
+          description: 'Morning fuel and guidance.',
           icon: Coffee,
           type: 'break'
         },
@@ -102,7 +96,7 @@ const ScheduleSection = () => {
         {
           time: '13:00 - 14:00',
           title: 'Lunch Break',
-          description: 'Breath before the judgment.',
+          description: 'Breathe before the judgment.',
           icon: Coffee,
           type: 'break'
         },
@@ -123,7 +117,7 @@ const ScheduleSection = () => {
         {
           time: '17:00 - 18:00',
           title: 'Closing Ceremony & Awards',
-          description: 'Heroes are crowned. Legends are born.',
+          description: 'the throne awaits.',
           icon: Trophy,
           type: 'ceremony'
         }
@@ -167,11 +161,10 @@ const ScheduleSection = () => {
               <button
                 key={index}
                 onClick={() => setActiveDay(index)}
-                className={`px-6 py-3 rounded-lg font-orbitron font-bold transition-all ${
-                  activeDay === index
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-secondary/20'
-                }`}
+                className={`px-6 py-3 rounded-lg font-orbitron font-bold transition-all ${activeDay === index
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-muted-foreground hover:text-foreground hover:bg-secondary/20'
+                  }`}
               >
                 {day.day}
               </button>
@@ -193,7 +186,7 @@ const ScheduleSection = () => {
           {/* Timeline */}
           <div className="space-y-6">
             {schedule[activeDay].events.map((event, index) => (
-              <div 
+              <div
                 key={index}
                 className={`relative pl-8 pb-6 border-l-4 rounded-lg p-6 transition-all hover:scale-[1.02] ${getEventTypeColor(event.type)}`}
               >
