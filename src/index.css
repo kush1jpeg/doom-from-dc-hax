@@ -20,11 +20,12 @@
     --popover: 0 0% 6%;
     --popover-foreground: 180 100% 96%;
 
-    /* Teal Primary System */
-    --primary: 180 100% 25%;
-    --primary-foreground: 0 0% 4%;
-    --primary-glow: 180 100% 35%;
-    --primary-neon: 180 100% 50%;
+    /* Enhanced Teal Primary System */
+    --primary: 180 100% 35%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 180 100% 45%;
+    --primary-neon: 180 100% 65%;
+    --primary-bright: 180 100% 75%;
 
     /* Secondary Dark Elements */
     --secondary: 0 0% 12%;
@@ -49,15 +50,17 @@
 
     --radius: 0.75rem;
 
-    /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-neon: linear-gradient(135deg, hsl(var(--primary-neon)), hsl(var(--primary-glow)));
+    /* Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-bright)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--primary-neon)), hsl(var(--primary-bright)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)), hsl(var(--primary-neon)));
     --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
     --gradient-doom: linear-gradient(45deg, hsl(0 0% 4%), hsl(0 0% 8%), hsl(0 0% 4%));
 
-    /* Shadows & Glows */
-    --shadow-neon: 0 0 30px hsl(var(--primary-neon) / 0.5);
-    --shadow-glow: 0 0 50px hsl(var(--primary-glow) / 0.3);
+    /* Enhanced Shadows & Glows */
+    --shadow-neon: 0 0 30px hsl(var(--primary-neon) / 0.6);
+    --shadow-glow: 0 0 50px hsl(var(--primary-bright) / 0.4);
+    --shadow-button: 0 0 20px hsl(var(--primary) / 0.5);
     --shadow-doom: 0 10px 40px hsl(0 0% 0% / 0.8);
 
     /* Animations */
