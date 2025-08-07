@@ -27,6 +27,11 @@
     --primary-neon: 180 100% 65%;
     --primary-bright: 180 100% 75%;
 
+    /* Blue Gradient System */
+    --blue: 220 100% 50%;
+    --blue-dark: 220 100% 35%;
+    --blue-bright: 220 100% 65%;
+
     /* Secondary Dark Elements */
     --secondary: 0 0% 12%;
     --secondary-foreground: 180 100% 90%;

@@ -18,7 +18,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-primary via-primary-glow to-primary-neon text-primary-foreground hover:from-primary-bright hover:via-primary-neon hover:to-primary-bright neon-glow font-orbitron font-bold uppercase tracking-wider shadow-[0_0_20px_hsl(var(--primary)/0.5)]",
+        hero: "bg-gradient-to-r from-blue-dark via-blue to-blue-bright text-white hover:from-blue hover:via-blue-bright hover:to-blue-dark shadow-[0_0_25px_hsl(var(--blue)/0.6)] font-orbitron font-bold uppercase tracking-wider border border-blue-bright/30",
         doom: "bg-secondary/30 text-foreground border border-primary/60 hover:bg-primary/30 hover:border-primary-glow hover:shadow-[0_0_15px_hsl(var(--primary)/0.4)] doom-card cyber-border",
         neon: "bg-transparent text-primary-neon border-2 border-primary-glow hover:bg-primary-glow hover:text-primary-foreground hover:shadow-[0_0_25px_hsl(var(--primary-neon)/0.6)] neon-glow transition-all duration-300",
       },
